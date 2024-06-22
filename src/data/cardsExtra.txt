@@ -1,0 +1,154 @@
+ {
+      "id": 5,
+      "name": "Boo",
+      "imageSrc": "src/assets/cards/boo.png",
+      "flipped": true,
+      "matched": false
+    },
+    {
+      "id": 5,
+      "name": "Boo",
+      "imageSrc": "src/assets/cards/boo.png",
+      "flipped": true,
+      "matched": false
+    },
+    {
+      "id": 6,
+      "name": "Bowser",
+      "imageSrc": "src/assets/cards/bowser.png",
+      "flipped": true,
+      "matched": false
+    },
+    {
+      "id": 6,
+      "name": "Bowser",
+      "imageSrc": "src/assets/cards/bowser.png",
+      "flipped": true,
+      "matched": false
+    },
+    {
+      "id": 7,
+      "name": "Bowser Jr.",
+      "imageSrc": "src/assets/cards/bowser-jr.png",
+      "flipped": true,
+      "matched": false
+    },
+    {
+      "id": 7,
+      "name": "Bowser Jr.",
+      "imageSrc": "src/assets/cards/bowser-jr.png",
+      "flipped": true,
+      "matched": false
+    },
+    {
+      "id": 8,
+      "name": "Daisy",
+      "imageSrc": "src/assets/cards/daisy.png",
+      "flipped": true,
+      "matched": false
+    },
+    {
+      "id": 8,
+      "name": "Daisy",
+      "imageSrc": "src/assets/cards/daisy.png",
+      "flipped": true,
+      "matched": false
+    },
+    {
+      "id": 10,
+      "name": "Donkey Kong",
+      "imageSrc": "src/assets/cards/donkey-kong.png",
+      "flipped": true,
+      "matched": false
+    },
+    {
+      "id": 10,
+      "name": "Donkey Kong",
+      "imageSrc": "src/assets/cards/donkey-kong.png",
+      "flipped": true,
+      "matched": false
+    },
+    {
+      "id": 11,
+      "name": "Koopa Troopa",
+      "imageSrc": "src/assets/cards/koopa-troopa.png",
+      "flipped": true,
+      "matched": false
+    },
+    {
+      "id": 11,
+      "name": "Koopa Troopa",
+      "imageSrc": "src/assets/cards/koopa-troopa.png",
+      "flipped": true,
+      "matched": false
+    },
+    {
+      "id": 12,
+      "name": "Peach",
+      "imageSrc": "src/assets/cards/peach.png",
+      "flipped": true,
+      "matched": false
+    },
+    {
+      "id": 12,
+      "name": "Peach",
+      "imageSrc": "src/assets/cards/peach.png",
+      "flipped": true,
+      "matched": false
+    },
+    {
+      "id": 13,
+      "name": "Toad",
+      "imageSrc": "src/assets/cards/toad.png",
+      "flipped": true,
+      "matched": false
+    },
+    {
+      "id": 13,
+      "name": "Toad",
+      "imageSrc": "src/assets/cards/toad.png",
+      "flipped": true,
+      "matched": false
+    },
+    {
+      "id": 14,
+      "name": "Waluigi",
+      "imageSrc": "src/assets/cards/waluigi.png",
+      "flipped": true,
+      "matched": false
+    },
+    {
+      "id": 14,
+      "name": "Waluigi",
+      "imageSrc": "src/assets/cards/waluigi.png",
+      "flipped": true,
+      "matched": false
+    },
+    {
+      "id": 15,
+      "name": "Wario",
+      "imageSrc": "src/assets/cards/wario.png",
+      "flipped": true,
+      "matched": false
+    },
+    {
+      "id": 15,
+      "name": "Wario",
+      "imageSrc": "src/assets/cards/wario.png",
+      "flipped": true,
+      "matched": false
+    },
+    {
+      "id": 16,
+      "name": "Yoshi",
+      "imageSrc": "src/assets/cards/yoshi.png",
+      "flipped": true,
+      "matched": false
+    },
+    {
+      "id": 16,
+      "name": "Yoshi",
+      "imageSrc": "src/assets/cards/yoshi.png",
+      "flipped": true,
+      "matched": false
+    }

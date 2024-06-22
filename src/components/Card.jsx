@@ -1,5 +1,3 @@
-import { useState } from 'react';
-
 const cardBg = 'src/assets/cards/card-bg.png';
 
 function Card({ card, index, onFlip }) {

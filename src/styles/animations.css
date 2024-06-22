@@ -1,3 +1,14 @@
+.container .loading-img {
+    width: 40%;
+    max-width: 135px;
+}
+
+.loading-img img {
+    width: 100%;
+    opacity: 0;
+    animation: blinkElement 900ms linear infinite alternate;
+}
+
 .you-win {
     position: absolute;
     width: 80%;
@@ -19,19 +30,17 @@
 /* Restart text */
 .restart {
     display: flex;
-    align-self: flex-end;
     align-items: center;
     gap: 12px;
-    margin-bottom: 12px;
 }
 
 .restart>div {
     display: none;
     align-items: center;
-    color: #FFFFFF;
+    color: var(--color-light);
     font-size: 18px;
     font-weight: 700;
-    animation: blinkRestart 900ms linear 800ms alternate infinite;
+    animation: blinkElement 900ms linear 800ms infinite alternate;
 }
 
 .restart.game-over>div {
@@ -50,7 +59,7 @@
     width: 100%;
 }
 
-@keyframes blinkRestart {
+@keyframes blinkElement {
     from {
         opacity: 0;
     }
