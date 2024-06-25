@@ -3,7 +3,7 @@ function padZero(num) {
   return num;
 }
 
-function Chronometer({ time, customClass = '' }) {
+function TimeFormatter({ time, customClass = '' }) {
   const mins = Math.floor(time / 60);
   const secs = time % 60;
   return (
@@ -13,4 +13,4 @@ function Chronometer({ time, customClass = '' }) {
   );
 }
 
-export default Chronometer;
+export default TimeFormatter;

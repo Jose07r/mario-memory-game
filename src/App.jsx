@@ -24,7 +24,7 @@ function App() {
   useEffect(() => {
     async function fetchCards() {
       try {
-        const res = await fetch('src/data/cards.json');
+        const res = await fetch('/data/cards.json');
         if (!res.ok) setStatus('error');
         const data = await res.json();
 
