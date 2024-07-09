@@ -1,0 +1,70 @@
+.container .loading-img {
+    width: 40%;
+    max-width: 135px;
+}
+
+.loading-img img {
+    width: 100%;
+    opacity: 0;
+    animation: blinkElement 900ms linear infinite alternate;
+}
+
+.you-win {
+    position: absolute;
+    width: 80%;
+    max-width: 500px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(.2);
+    transition: transform 800ms ease-in;
+    visibility: hidden;
+    z-index: 10;
+}
+
+.you-win.game-over {
+    transform: translate(-50%, -50%) scale(1);
+    transform-origin: center;
+    visibility: visible;
+}
+
+/* Restart text */
+.restart {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.restart>div {
+    display: none;
+    align-items: center;
+    color: var(--color-light);
+    font-size: 18px;
+    font-weight: 700;
+    animation: blinkElement 900ms linear 800ms infinite alternate;
+}
+
+.restart.game-over>div {
+    display: flex;
+    opacity: 0;
+}
+
+.restart>div span {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-left: 5px;
+}
+
+.restart>div span img {
+    width: 100%;
+}
+
+@keyframes blinkElement {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

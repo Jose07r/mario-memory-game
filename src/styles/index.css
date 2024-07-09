@@ -1,0 +1,366 @@
+@import './animations.css';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --color-primary: #F8CD09;
+  --color-primary-darker: #F4BD09;
+  --color-secondary: #0094d2;
+  --color-light: #FEFEFE;
+  --color-dark-1: #2B2B2B;
+  --color-dark-2: #8A8A8A;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: max-content;
+  width: 100%;
+}
+
+body {
+  background-image: url('/images/body_bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  backdrop-filter: blur(1.5px);
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 350px;
+  overflow-x: hidden;
+}
+
+#root {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 100vh;
+  padding: 18px;
+}
+
+.title {
+  width: 85%;
+  max-width: 350px;
+}
+
+.title img {
+  width: 100%;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1224px;
+  flex-grow: 1;
+}
+
+.container>div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.scores {
+  margin-top: 2rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: var(--color-secondary);
+  border-radius: .8rem;
+  max-width: 22rem;
+  padding: .6rem 1.2rem;
+  box-shadow: 0 0 10px 4px var(--color-dark-1);
+}
+
+.scores h2 {
+  color: var(--color-dark-2);
+  font-size: 1rem;
+  border-bottom: 2px solid rgba(138, 138, 138, .35);
+  margin: .6rem;
+  padding: .2rem 0;
+  width: 100%;
+  text-align: start;
+  text-transform: uppercase;
+}
+
+.scores-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 1rem;
+  max-height: calc(6.8rem + 3px);
+  width: 100%;
+  border-radius: 1rem;
+  padding: .6rem;
+}
+
+.score-item {
+  padding: 0;
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+  opacity: .35;
+  font-weight: 600;
+  border-bottom: 1px dashed var(--color-secondary);
+  min-width: 50%;
+}
+
+.score-item.top {
+  opacity: 1;
+}
+
+.score-item.current {
+  opacity: 1;
+  color: var(--color-primary-darker);
+  border-color: var(--color-primary-darker);
+}
+
+.score-item span {
+  margin-left: .8rem;
+}
+
+.clear-scores-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  appearance: none;
+  background-color: #eb1c24;
+  color: #FFF;
+  border: none;
+  font-size: 1.2rem;
+  margin-top: .5rem;
+  opacity: .8;
+  cursor: pointer;
+  padding: .4rem 1.2rem;
+  border-radius: 8px;
+  transition: opacity .3s ease;
+}
+
+.clear-scores-btn:hover {
+  opacity: 1;
+}
+
+.clear-scores-btn span:first-of-type {
+  width: 14px;
+}
+
+.clear-scores-btn span img {
+  width: 100%;
+}
+
+.start-btn button {
+  background-color: var(--color-primary);
+  border: 4px solid var(--color-dark-1);
+  color: var(--color-dark-1);
+  font-size: 1.2em;
+  font-weight: 600;
+  letter-spacing: 2px;
+  padding: .8em 1.5em;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: inset 0 0 4px transparent;
+  transition: box-shadow .3s ease;
+}
+
+.start-btn button:hover {
+  box-shadow: inset 0 0 12px 4px var(--color-primary-darker);
+}
+
+.restart button {
+  border: none;
+  background-color: rgba(255, 255, 255, 0.7);
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.2);
+  transition: all .3s ease;
+}
+
+.restart button:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.restart button img {
+  width: 12px;
+  height: 12px;
+}
+
+.board {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: rgba(255, 255, 255, 0.7);
+  width: 100%;
+  height: max-content;
+  padding: 12px;
+  border-radius: 10px;
+}
+
+.board-controls {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.timer {
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--color-light);
+  background-color: rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(3px);
+  padding: 6px 10px;
+  border-radius: 5px;
+}
+
+/* Cards */
+.card {
+  background-color: transparent;
+  filter: brightness(100%);
+  aspect-ratio: 2/2.6;
+  width: calc(20% - 6px);
+  max-width: 75px;
+  cursor: pointer;
+  margin: 3px;
+  transform: rotateY(0deg);
+  perspective: 1000px;
+  transition: filter 600ms ease;
+}
+
+.container .game-over .card {
+  filter: brightness(60%);
+}
+
+.card.flipped>.card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1s ease;
+  transform-style: preserve-3d;
+}
+
+.card-inner .front,
+.card-inner .back {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.card-inner .front {
+  transform: rotateY(180deg);
+}
+
+.card .card-inner img {
+  width: 100%;
+  height: 100%;
+}
+
+.card.flipped {
+  pointer-events: none;
+}
+
+/* Media queries */
+@media screen and (max-height: 542px) and (orientation: landscape) {
+  .title {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 120px;
+  }
+
+  .board-controls {
+    justify-content: flex-end;
+    gap: 12px;
+  }
+
+  .board .card {
+    width: calc(10% - 6px);
+    max-width: 65px;
+  }
+}
+
+@media screen and (min-width: 641px) and (orientation: portrait) {
+  #root {
+    padding: 22px;
+  }
+
+  .timer {
+    font-size: 22px;
+  }
+
+  .restart button {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+  }
+
+  .restart button img {
+    width: 16px;
+    height: 16px;
+  }
+
+  .board .card {
+    width: calc(100%/6 - 8px);
+    max-width: 105px;
+    margin: 4px;
+  }
+}
+
+@media screen and (min-width: 641px) and (min-height: 542px) and (orientation: landscape) {
+  #root {
+    padding: 22px;
+  }
+
+  .timer {
+    font-size: 24px;
+  }
+
+  .restart button {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+  }
+
+  .restart button img {
+    width: 16px;
+    height: 16px;
+  }
+
+  .board .card {
+    width: calc(100%/8 - 8px);
+    max-width: 100px;
+    margin: 4px;
+  }
+}
+
+@media screen and (min-width: 1148px) {
+  #root {
+    padding: 22px;
+  }
+
+  .board .card {
+    width: calc(10% - 10px);
+    max-width: 120px;
+    margin: 5px;
+  }
+}
