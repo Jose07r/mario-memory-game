@@ -1,4 +1,4 @@
-const cardBg = './cards/card-bg.png';
+import cardBg from '@assets/images/card-bg.png';
 
 function Card({ card, index, onFlip }) {
   const cardClass = card.flipped || card.matched ? ' flipped' : '';
@@ -10,7 +10,7 @@ function Card({ card, index, onFlip }) {
           <img src={cardBg} alt="Card back face" />
         </div>
         <div className="front">
-          <img src={card.imageSrc} alt={card.name} />
+          <img src={card.imageSrc()} alt={card.name} />
         </div>
       </div>
     </div>

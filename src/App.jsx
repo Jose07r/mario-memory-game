@@ -1,11 +1,12 @@
 import { useEffect, useRef, useState } from 'react';
-import { rawCards } from '/src/assets/data/cards';
-import shuffleCards from '/src/utils/shuffleCards';
-import Board from '/src/components/Board';
-import TimeFormatter from '/src/components/TimeFormatter';
-import { startTimer, stopTimer } from '/src/utils/Timer';
-import Scores from '/src/components/Scores';
-import Loading from '/src/components/Loading';
+import { rawCards } from '@assets/data/cards';
+import shuffleCards from '@/utils/shuffleCards';
+import Board from '@components/Board';
+import TimeFormatter from '@components/TimeFormatter';
+import { startTimer, stopTimer } from '@/utils/Timer';
+import Scores from '@components/Scores';
+import Loading from '@components/Loading';
+import Footer from '@components/Footer';
 
 function App() {
   const [status, setStatus] = useState('start');
@@ -35,7 +36,7 @@ function App() {
       showCardsId.current = setTimeout(() => {
         setCards((curCards) => curCards.map((c) => ({ ...c, flipped: false })));
         startTimer(setTimeElapsed);
-      }, 4500);
+      }, 5000);
     }
   }, [status]);
 
@@ -149,6 +150,7 @@ function App() {
           </>
         )}
       </div>
+      <Footer />
     </>
   );
 }

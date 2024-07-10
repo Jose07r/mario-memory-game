@@ -1,211 +1,279 @@
+const cardsPaths = Object.values(
+  import.meta.glob('@assets/images/cards/*.{png, PNG}', {
+    eager: true,
+    query: '?url',
+    import: 'default',
+  })
+);
+
 export const rawCards = [
   {
-    id: 1,
+    id: 0,
     name: 'Mario',
-    imageSrc: './cards/mario.png',
+    imageSrc: function () {
+      return cardsPaths.at(this.id);
+    },
+    flipped: true,
+    matched: false,
+  },
+  {
+    id: 0,
+    name: 'Mario',
+    imageSrc: function () {
+      return cardsPaths.at(this.id);
+    },
     flipped: true,
     matched: false,
   },
   {
     id: 1,
-    name: 'Mario',
-    imageSrc: './cards/mario.png',
+    name: 'Luigi',
+    imageSrc: function () {
+      return cardsPaths.at(this.id);
+    },
+    flipped: true,
+    matched: false,
+  },
+  {
+    id: 1,
+    name: 'Luigi',
+    imageSrc: function () {
+      return cardsPaths.at(this.id);
+    },
     flipped: true,
     matched: false,
   },
   {
     id: 2,
-    name: 'Luigi',
-    imageSrc: './cards/luigi.png',
+    name: 'Baby Mario',
+    imageSrc: function () {
+      return cardsPaths.at(this.id);
+    },
     flipped: true,
     matched: false,
   },
   {
     id: 2,
-    name: 'Luigi',
-    imageSrc: './cards/luigi.png',
+    name: 'Baby Mario',
+    imageSrc: function () {
+      return cardsPaths.at(this.id);
+    },
     flipped: true,
     matched: false,
   },
   {
     id: 3,
-    name: 'Baby Mario',
-    imageSrc: './cards/baby-mario.png',
+    name: 'Baby Luigi',
+    imageSrc: function () {
+      return cardsPaths.at(this.id);
+    },
     flipped: true,
     matched: false,
   },
   {
     id: 3,
-    name: 'Baby Mario',
-    imageSrc: './cards/baby-mario.png',
+    name: 'Baby Luigi',
+    imageSrc: function () {
+      return cardsPaths.at(this.id);
+    },
     flipped: true,
     matched: false,
   },
   {
     id: 4,
-    name: 'Baby Luigi',
-    imageSrc: './cards/baby-luigi.png',
+    name: 'Boo',
+    imageSrc: function () {
+      return cardsPaths.at(this.id);
+    },
     flipped: true,
     matched: false,
   },
   {
     id: 4,
-    name: 'Baby Luigi',
-    imageSrc: './cards/baby-luigi.png',
+    name: 'Boo',
+    imageSrc: function () {
+      return cardsPaths.at(this.id);
+    },
     flipped: true,
     matched: false,
   },
   {
     id: 5,
-    name: 'Boo',
-    imageSrc: './cards/boo.png',
+    name: 'Bowser',
+    imageSrc: function () {
+      return cardsPaths.at(this.id);
+    },
     flipped: true,
     matched: false,
   },
   {
     id: 5,
-    name: 'Boo',
-    imageSrc: './cards/boo.png',
+    name: 'Bowser',
+    imageSrc: function () {
+      return cardsPaths.at(this.id);
+    },
     flipped: true,
     matched: false,
   },
   {
     id: 6,
-    name: 'Bowser',
-    imageSrc: './cards/bowser.png',
+    name: 'Bowser Jr.',
+    imageSrc: function () {
+      return cardsPaths.at(this.id);
+    },
     flipped: true,
     matched: false,
   },
   {
     id: 6,
-    name: 'Bowser',
-    imageSrc: './cards/bowser.png',
+    name: 'Bowser Jr.',
+    imageSrc: function () {
+      return cardsPaths.at(this.id);
+    },
     flipped: true,
     matched: false,
   },
   {
     id: 7,
-    name: 'Bowser Jr.',
-    imageSrc: './cards/bowser-jr.png',
+    name: 'Daisy',
+    imageSrc: function () {
+      return cardsPaths.at(this.id);
+    },
     flipped: true,
     matched: false,
   },
   {
     id: 7,
-    name: 'Bowser Jr.',
-    imageSrc: './cards/bowser-jr.png',
+    name: 'Daisy',
+    imageSrc: function () {
+      return cardsPaths.at(this.id);
+    },
     flipped: true,
     matched: false,
   },
   {
     id: 8,
-    name: 'Daisy',
-    imageSrc: './cards/daisy.png',
+    name: 'Donkey Kong',
+    imageSrc: function () {
+      return cardsPaths.at(this.id);
+    },
     flipped: true,
     matched: false,
   },
   {
     id: 8,
-    name: 'Daisy',
-    imageSrc: './cards/daisy.png',
+    name: 'Donkey Kong',
+    imageSrc: function () {
+      return cardsPaths.at(this.id);
+    },
+    flipped: true,
+    matched: false,
+  },
+  {
+    id: 9,
+    name: 'Koopa Troopa',
+    imageSrc: function () {
+      return cardsPaths.at(this.id);
+    },
+    flipped: true,
+    matched: false,
+  },
+  {
+    id: 9,
+    name: 'Koopa Troopa',
+    imageSrc: function () {
+      return cardsPaths.at(this.id);
+    },
     flipped: true,
     matched: false,
   },
   {
     id: 10,
-    name: 'Donkey Kong',
-    imageSrc: './cards/donkey-kong.png',
+    name: 'Peach',
+    imageSrc: function () {
+      return cardsPaths.at(this.id);
+    },
     flipped: true,
     matched: false,
   },
   {
     id: 10,
-    name: 'Donkey Kong',
-    imageSrc: './cards/donkey-kong.png',
+    name: 'Peach',
+    imageSrc: function () {
+      return cardsPaths.at(this.id);
+    },
     flipped: true,
     matched: false,
   },
   {
     id: 11,
-    name: 'Koopa Troopa',
-    imageSrc: './cards/koopa-troopa.png',
+    name: 'Toad',
+    imageSrc: function () {
+      return cardsPaths.at(this.id);
+    },
     flipped: true,
     matched: false,
   },
   {
     id: 11,
-    name: 'Koopa Troopa',
-    imageSrc: './cards/koopa-troopa.png',
+    name: 'Toad',
+    imageSrc: function () {
+      return cardsPaths.at(this.id);
+    },
     flipped: true,
     matched: false,
   },
   {
     id: 12,
-    name: 'Peach',
-    imageSrc: './cards/peach.png',
+    name: 'Waluigi',
+    imageSrc: function () {
+      return cardsPaths.at(this.id);
+    },
     flipped: true,
     matched: false,
   },
   {
     id: 12,
-    name: 'Peach',
-    imageSrc: './cards/peach.png',
+    name: 'Waluigi',
+    imageSrc: function () {
+      return cardsPaths.at(this.id);
+    },
     flipped: true,
     matched: false,
   },
   {
     id: 13,
-    name: 'Toad',
-    imageSrc: './cards/toad.png',
+    name: 'Wario',
+    imageSrc: function () {
+      return cardsPaths.at(this.id);
+    },
     flipped: true,
     matched: false,
   },
   {
     id: 13,
-    name: 'Toad',
-    imageSrc: './cards/toad.png',
+    name: 'Wario',
+    imageSrc: function () {
+      return cardsPaths.at(this.id);
+    },
     flipped: true,
     matched: false,
   },
   {
     id: 14,
-    name: 'Waluigi',
-    imageSrc: './cards/waluigi.png',
+    name: 'Yoshi',
+    imageSrc: function () {
+      return cardsPaths.at(this.id);
+    },
     flipped: true,
     matched: false,
   },
   {
     id: 14,
-    name: 'Waluigi',
-    imageSrc: './cards/waluigi.png',
-    flipped: true,
-    matched: false,
-  },
-  {
-    id: 15,
-    name: 'Wario',
-    imageSrc: './cards/wario.png',
-    flipped: true,
-    matched: false,
-  },
-  {
-    id: 15,
-    name: 'Wario',
-    imageSrc: './cards/wario.png',
-    flipped: true,
-    matched: false,
-  },
-  {
-    id: 16,
     name: 'Yoshi',
-    imageSrc: './cards/yoshi.png',
-    flipped: true,
-    matched: false,
-  },
-  {
-    id: 16,
-    name: 'Yoshi',
-    imageSrc: './cards/yoshi.png',
+    imageSrc: function () {
+      return cardsPaths.at(this.id);
+    },
     flipped: true,
     matched: false,
   },
